@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>김아인의 포트폴리오</title>
+	<meta name="author" content="Alvaro Trigo Lopez" />
+	<meta name="description" content="fullPage full-screen navigation and sections control menu." />
+	<meta name="keywords"  content="fullpage,jquery,demo,screen,fullscreen,navigation,control arrows, dots" />
+	<meta name="Resource-type" content="Document" />
+	<link rel="stylesheet" type="text/css" href="fullpage.css" />
+	<link rel="stylesheet" type="text/css" href="examples.css" />
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+		html, body{
+            font-family: 'Do Hyeon', sans-serif;
+        }
+		h1{
+			font-size: 80px;
+			color: #fff;
+			margin: 0px 0px 0px 100px;
+		}
+		h2{
+			font-size: 60px;
+			color: #fff;
+		}
+		h3{
+			font-size: 40px;
+			color: #fff;
+		}
+		h4{
+			font-size: 25px;
+			color: #fff;
+		}
+		.intro p{
+			color: #fff;
+		}
+		.section{
+			text-align:center;
+		}
+		.controlArrow.prev {
+			left: 50px;
+		}
+		.controlArrow.next{
+			right: 50px;
+		}
+		#infoMenu li a {
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<div id="fullpage">
+		<div class="section" id="section0">
+			<div class="intro">
+				<h1 style="color: #DCE2F0; text-align: left;">반갑습니다 👋</h1>
+				<div style="display: block; text-align: left; margin: 0px 0px 0px 100px;">
+					<h1 style="display: inline-block; color: #DCE2F0; text-align: left; margin: 0px 20px 0px 0px;">저는</h1>
+					<h1 style="display: inline-block; text-align: left; margin: 0px 20px 0px 0px; background: linear-gradient(#f1b257, #ec4937); color: transparent; -webkit-background-clip: text;">Swift</h1>
+					<h1 style="display: inline-block; color: #DCE2F0; text-align: left; margin: 0px 20px 0px 0px;">개발자, </h1>
+					<h1 style="display: inline-block; text-align: left; margin: 0; background: linear-gradient(#67e0da, #13c43f); color: transparent; -webkit-background-clip: text;">김아인</h1>
+					<h1 style="display: inline-block; color: #DCE2F0; text-align: left; margin: 0px 20px 0px 0px;">입니다.</h1>
+				</div>
+			</div>
+		</div>
+		<div class="section" id="section1">
+			<div class="slide" id="slide1">
+				<div class="intro">
+					<h2 style="color: #DCE2F0;">Coron's APP</h2>
+					<h3 style="color: #DCE2F0;">Swift + Storyboard 조합으로 처음 만들어본 iOS APP</h3>
+					<h4 style="color: #DCE2F0;">개발 | 2021년 n월 n일 ~ 2021년 n월 n일</h4>
+					<h4 style="color: #DCE2F0;">개발 | 2021년 n월 n일 ~ 2021년 n월 n일</h4>
+				</div>
+			</div>
+	
+			<div class="slide" id="slide2">
+				<h2 style="color: #DCE2F0;">디미타임즈 : Web</h2>
+				<h3 style="color: #DCE2F0;">한국디지털미디어고등학교 학생들의 온라인 수업 접속 편의를 위한 서비스</h3>
+				<h4 style="color: #DCE2F0;">개발 | 2021년 n월 n일 ~ 2021년 n월 n일</h4>
+				<h4 style="color: #DCE2F0;">개발 | 2021년 n월 n일 ~ 2021년 n월 n일</h4>
+			</div>
+		</div>
+			<!-- <div class="intro">
+				<h1 style="color: #DCE2F0; text-align: left;">포트폴리오 🧑‍💻</h1>
+				<br>
+				<div style="margin: 0px 0px 0px 100px; padding: 20px 40px 20px 40px; border-radius: 20px; border: solid #169c80 10px; background-color: #1BBC9B; width: fit-content;">
+					<h2 style="color: #DCE2F0; text-align: left;">Coron's APP</h2>
+					<h3 style="color: #DCE2F0; text-align: left;">Swift + Storyboard 조합으로 처음 만들어본 iOS APP</h3>
+					<h4 style="color: #DCE2F0; text-align: left;">개발 | 2021년 n월 n일 ~ 2021년 n월 n일</h4>
+					<h4 style="color: #DCE2F0; text-align: left;">개발 | 2021년 n월 n일 ~ 2021년 n월 n일</h4>
+				</div>
+				<br>
+				<div style="margin: 0px 0px 0px 100px; padding: 20px 40px 20px 40px; border-radius: 20px; border: solid #169c80 10px; background-color: #1BBC9B; width: fit-content;">
+					<h2 style="color: #DCE2F0; text-align: left;">디미타임즈 : Web</h2>
+					<h3 style="color: #DCE2F0; text-align: left;">한국디지털미디어고등학교 학생들의 온라인 수업 접속 편의를 위한 서비스</h3>
+					<h4 style="color: #DCE2F0; text-align: left;">개발 | 2021년 n월 n일 ~ 2021년 n월 n일</h4>
+					<h4 style="color: #DCE2F0; text-align: left;">개발 | 2021년 n월 n일 ~ 2021년 n월 n일</h4>
+				</div>
+				<br>
+				<div style="margin: 0px 0px 0px 100px; padding: 20px 40px 20px 40px; border-radius: 20px; border: solid #169c80 10px; background-color: #1BBC9B; width: fit-content;">
+					<h2 style="color: #DCE2F0; text-align: left;">디미고미 : APP & Web</h2>
+					<h3 style="color: #DCE2F0; text-align: left;">한국디지털미디어고등학교 학생들의 방과후 및 야간 자율학습 시간의 자습 위치 등록 서비스</h3>
+					<h4 style="color: #DCE2F0; text-align: left;">개발 | 2021년 n월 n일 ~ 2021년 n월 n일</h4>
+					<h4 style="color: #DCE2F0; text-align: left;">개발 | 2021년 n월 n일 ~ 2021년 n월 n일</h4>
+				</div>
+			</div>
+		</div> -->
+		<div class="section" id="section2">
+			<div class="intro">
+				<h1 style="color: #DCE2F0; text-align: left;">학력 🎓</h1>
+				<br>
+				<h2 style="color: #DCE2F0; text-align: left; margin: 0px 0px 0px 100px;">- 단양소백산중학교 재학 (2018.03.02~2021.01.14)</h2>
+				<h2 style="color: #DCE2F0; text-align: left; margin: 0px 0px 0px 100px;">- Dropper Lab : Sec 팀 소속 (2020.10.13~2021.04.02)</h2>
+				<h2 style="color: #DCE2F0; text-align: left; margin: 0px 0px 0px 100px;">- 한국디지털미디어고등학교 20기 해킹방어과 재학 (2021.03.02~)</h2>
+				<h2 style="color: #DCE2F0; text-align: left; margin: 0px 0px 0px 100px;">- 한국디지털미디어고등학교 인트라넷 개발팀 DIN 소속 (2021.04.16~)</h2>
+			</div>
+		</div>
+		<div class="section" id="section3">
+			<div class="intro">
+				<h1 style="color: #DCE2F0; text-align: left;">수상경력 🏆️</h1>
+				<br>
+				<h2 style="color: #DCE2F0; text-align: left; margin: 0px 0px 0px 100px;">- 2020 공주대학교 정보보호영재교육원 CTF 개인예선전 7위</h2>
+				<h2 style="color: #DCE2F0; text-align: left; margin: 0px 0px 0px 100px;">- 2021 신세계 I&C Hello New( ) World 해커톤 최우수상 (디미타임즈 팀)</h2>
+			</div>
+		</div>
+		<div class="section" id="section4">
+			<div class="intro">
+				<h1 style="color: #DCE2F0; text-align: left;">연락처 📞</h1>
+				<br>
+				<h2 style="color: #DCE2F0; text-align: left; margin: 0px 0px 0px 100px;">Mobile | 010-9539-4321</h2>
+				<h2 style="color: #DCE2F0; text-align: left; margin: 0px 0px 0px 100px;">Email | kimain0401@kakao.com</h2>
+				<h2 style="color: #DCE2F0; text-align: left; margin: 0px 0px 0px 100px;">Discord | corondev_kimain #0722</h2>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="fullpage.js"></script>
+	<script type="text/javascript" src="examples.js"></script>
+	<script type="text/javascript">
+		var myFullpage = new fullpage('#fullpage', {
+			anchors: ['1stPage', '2ndPage', '3rdPage'],
+			sectionsColor: ['#101820', '#1BBC9B', '#7E8F7C', '#1BBC9B', '#7E8F7C'],
+			navigation: true,
+			navigationPosition: 'right',
+			navigationTooltips: ['반갑습니다 👋', '포트폴리오 🧑‍💻', '학력 🎓', '수상경력 🏆️', '연락처 📞']
+		});
+	</script>
+</body>
+</html>
