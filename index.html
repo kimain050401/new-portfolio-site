@@ -84,13 +84,30 @@
 		#infoMenu li a {
 			color: #fff;
 		}
+		@keyframes shake {
+			0% {
+				transform: rotate(0deg);
+			}
+			50% {
+				transform: rotate(20deg);
+			}
+			100% {
+				transform: rotate(0deg);
+			}
+		}
+		#hello_hand {
+			animation: shake 3s infinite;
+		}
 	</style>
 </head>
 <body>
 	<div id="fullpage">
 		<div class="section" id="section0">
 			<div class="intro" style="margin: 0px 100px 0px 100px;">
-				<h1 style="color: #DCE2F0; text-align: left;">반갑습니다 👋</h1>
+				<div style="display: block; text-align: left;">
+					<h1 style="display: inline-block; color: #DCE2F0; text-align: left; margin: 0px 20px 0px 0px;">반갑습니다</h1>
+					<h1 id="hello_hand" style="display: inline-block; color: #DCE2F0; text-align: left; margin: 0px 20px 0px 0px;">👋</h1>
+				</div>
 				<div style="display: block; text-align: left;">
 					<h1 style="display: inline-block; text-align: left; margin: 0px 20px 0px 0px; background: linear-gradient(#fdae3f, #ff3727); color: transparent; -webkit-background-clip: text;">Swift</h1>
 					<h1 style="display: inline-block; color: #DCE2F0; text-align: left; margin: 0px 20px 0px 0px;">개발자, </h1>
