@@ -18,6 +18,10 @@
 			color: #fff;
 		}
 		h2{
+			font-size: 3em;
+			color: #fff;
+		}
+		#section1 h2{
 			font-size: 4em;
 			color: #fff;
 		}
@@ -29,6 +33,42 @@
 			font-size: 2em;
 			color: #fff;
 		}
+		h5{
+			font-size: 2em;
+			color: #fff;
+		}
+		progress{
+			width: 0%;
+			background: green;
+			transition: width 1.5s ease;
+		}
+		progress.active {
+			width: 90%;
+		}
+        progress#swift::-moz-progress-bar{
+            background: #f05137;
+        }
+        progress#swift::-webkit-progress-value{
+            background: #f05137;
+        }
+		progress#javascript::-moz-progress-bar{
+            background: #f7df1c;
+        }
+        progress#javascript::-webkit-progress-value{
+            background: #f7df1c;
+        }
+		progress#python::-moz-progress-bar{
+            background: #40aaff;
+        }
+        progress#python::-webkit-progress-value{
+            background: #40aaff;
+        }
+		progress#html::-moz-progress-bar{
+            background: #009914;
+        }
+        progress#html::-webkit-progress-value{
+            background: #009914;
+        }
 		.intro p{
 			color: #fff;
 		}
@@ -52,8 +92,7 @@
 			<div class="intro" style="margin: 0px 100px 0px 100px;">
 				<h1 style="color: #DCE2F0; text-align: left;">반갑습니다 👋</h1>
 				<div style="display: block; text-align: left;">
-					<h1 style="display: inline-block; color: #DCE2F0; text-align: left; margin: 0px 20px 0px 0px;">저는</h1>
-					<h1 style="display: inline-block; text-align: left; margin: 0px 20px 0px 0px; background: linear-gradient(#f1b257, #ec4937); color: transparent; -webkit-background-clip: text;">Swift</h1>
+					<h1 style="display: inline-block; text-align: left; margin: 0px 20px 0px 0px; background: linear-gradient(#fdae3f, #ff3727); color: transparent; -webkit-background-clip: text;">Swift</h1>
 					<h1 style="display: inline-block; color: #DCE2F0; text-align: left; margin: 0px 20px 0px 0px;">개발자, </h1>
 					<h1 style="display: inline-block; text-align: left; margin: 0; background: linear-gradient(#67e0da, #13c43f); color: transparent; -webkit-background-clip: text;">김아인</h1>
 					<h1 style="display: inline-block; color: #DCE2F0; text-align: left; margin: 0px 20px 0px 0px;">입니다.</h1>
@@ -63,26 +102,75 @@
 		<div class="section" id="section1">
 			<div class="slide" id="slide1">
 				<div class="intro" style="padding: 120px;">
-					<h2 style="color: #DCE2F0;">Coron's APP</h2>
-					<h3 style="color: #DCE2F0;">처음 개발해본 iOS APP, 강력한 보안을 가진 메모 앱</h3>
-					<h4 style="color: #DCE2F0;">언어 | Swift, Storyboard</h4>
-					<h4 style="color: #DCE2F0;">개발 | 2021년 n월 n일 ~ 2021년 n월 n일</h4>
+					<img src="dimigome.png" width="100px" style="border-radius: 20px;">
+					<br>
+					<h2 style="color: #DCE2F0;">디미고미 (APP & Web)</h2>
+					<br>
+					<h3 style="color: #DCE2F0;">한국디지털미디어고등학교 학생들의 방과후 및 야간 자율학습 시간의 자습 위치 등록 서비스</h3>
+					<br>
+					<h4 style="color: #DCE2F0;">언어 | SwiftUI, HTML, JS, Ajax, Flask</h4>
+					<h4 style="color: #DCE2F0;">개발 | 2021년 10월 21일 ~ 지속적인 개발 중</h4>
 				</div>
 			</div>
 			<div class="slide" id="slide2">
 				<div class="intro" style="padding: 120px;">
-					<h2 style="color: #DCE2F0;">디미타임즈 : Web</h2>
-					<h3 style="color: #DCE2F0;">한국디지털미디어고등학교 학생들의 온라인 수업 접속 편의를 위한 서비스</h3>
-					<h4 style="color: #DCE2F0;">언어 | HTML, JS, Flask</h4>
-					<h4 style="color: #DCE2F0;">개발 | 2021년 n월 n일 ~ 2021년 n월 n일</h4>
+					<img src="corons_app.png" width="100px" style="border-radius: 20px;">
+					<br>
+					<h2 style="color: #DCE2F0;">Coron's APP (APP)</h2>
+					<br>
+					<h3 style="color: #DCE2F0;">처음 개발해본 iOS APP, 강력한 보안을 가진 메모 앱</h3>
+					<br>
+					<h4 style="color: #DCE2F0;">언어 | Swift, Storyboard</h4>
+					<h4 style="color: #DCE2F0;">개발 | 2021년 1월 30일 ~ 2021년 3월 1일</h4>
 				</div>
 			</div>
 			<div class="slide" id="slide3">
 				<div class="intro" style="padding: 120px;">
-					<h2 style="color: #DCE2F0;">디미고미 : APP & Web</h2>
-					<h3 style="color: #DCE2F0;">한국디지털미디어고등학교 학생들의 방과후 및 야간 자율학습 시간의 자습 위치 등록 서비스</h3>
-					<h4 style="color: #DCE2F0;">언어 | SwiftUI, HTML, JS, Flask</h4>
+					<img src="dimitimes.png" width="100px" style="border-radius: 20px;">
+					<br>
+					<h2 style="color: #DCE2F0;">디미타임즈 (Web)</h2>
+					<br>
+					<h3 style="color: #DCE2F0;">한국디지털미디어고등학교 학생들의 온라인 수업 접속 편의를 위한 서비스</h3>
+					<br>
+					<h4 style="color: #DCE2F0;">언어 | HTML, JS, Flask</h4>
+					<h4 style="color: #DCE2F0;">개발 | 2021년 3월 4일 ~ 2021년 11월 20일</h4>
+				</div>
+			</div>
+			<div class="slide" id="slide4">
+				<div class="intro" style="padding: 120px;">
+					<img src="findflag.png" width="100px" style="border-radius: 20px;">
+					<br>
+					<h2 style="color: #DCE2F0;">Find Flag()! (Web)</h2>
+					<br>
+					<h3 style="color: #DCE2F0;">개발자를 위한 간단하고 쉬운 모의 CTF 서비스</h3>
+					<br>
+					<h4 style="color: #DCE2F0;">언어 | HTML, JS, Ajax, Flask</h4>
 					<h4 style="color: #DCE2F0;">개발 | 2021년 n월 n일 ~ 2021년 n월 n일</h4>
+				</div>
+			</div>
+		</div>
+		<div class="section" id="section2">
+			<div class="intro" style="margin: 0px 100px 0px 100px;">
+				<h1 style="color: #DCE2F0; text-align: left;">사용 언어 🌐</h1>
+				<br>
+				<div style="text-align: left;">
+					<h2 style="color: #DCE2F0; text-align: left;">Swift</h2>
+					<progress id="swift" max="100" value="80"></progress>
+				</div>
+				<br>
+				<div style="text-align: left;">
+					<h2 style="color: #DCE2F0; text-align: left;">Python</h2>
+					<progress id="python" max="100" value="60"></progress>
+				</div>
+				<br>
+				<div style="text-align: left;">
+					<h2 style="color: #DCE2F0; text-align: left;">HTML</h2>
+					<progress id="html" max="100" value="70"></progress>
+				</div>
+				<br>
+				<div style="text-align: left;">
+					<h2 style="color: #DCE2F0; text-align: left;">Java Script</h2>
+					<progress id="javascript" max="100" value="40"></progress>
 				</div>
 			</div>
 		</div>
@@ -97,7 +185,7 @@
 		</div>
 		<div class="section" id="section3">
 			<div class="intro" style="margin: 0px 100px 0px 100px;">
-				<h1 style="color: #DCE2F0; text-align: left;">수상경력 🏆️</h1>
+				<h1 style="color: #DCE2F0; text-align: left;">수상내역 🏆️</h1>
 				<br>
 				<h2 style="color: #DCE2F0; text-align: left;">- 2020 공주대학교 정보보호영재교육원 CTF 개인예선전 7위</h2>
 				<h2 style="color: #DCE2F0; text-align: left;">- 2021 신세계 I&C Hello New( ) World 해커톤 최우수상 (디미타임즈 팀)</h2>
@@ -107,9 +195,12 @@
 			<div class="intro" style="margin: 0px 100px 0px 100px;">
 				<h1 style="color: #DCE2F0; text-align: left;">연락처 📞</h1>
 				<br>
-				<h2 style="color: #DCE2F0; text-align: left;">Mobile | 010-9539-4321</h2>
-				<h2 style="color: #DCE2F0; text-align: left;">Email | kimain0401@kakao.com</h2>
+				<h2 style="color: #DCE2F0; text-align: left; cursor: pointer;" onclick="location.href='tel:01095394321'">Mobile | 010-9539-4321</h2>
+				<h2 style="color: #DCE2F0; text-align: left; cursor: pointer;" onclick="location.href='mailto:kimain0401@kakao.com'">Email | kimain0401@kakao.com</h2>
 				<h2 style="color: #DCE2F0; text-align: left;">Discord | corondev_kimain #0722</h2>
+				<h2 style="color: #DCE2F0; text-align: left; cursor: pointer;" onclick="location.href='https://github.com/kimain050401'">GitHub | github.com/kimain050401</h2>
+				<br>
+				<h5 style="color: #DCE2F0; text-align: left; margin: 0px 0px 0px 0px;">Copyright © 2021 KimAin. 모든 권리 보유.</h5>
 			</div>
 		</div>
 	</div>
@@ -118,12 +209,34 @@
 	<script type="text/javascript" src="examples.js"></script>
 	<script type="text/javascript">
 		var myFullpage = new fullpage('#fullpage', {
-			anchors: ['hello', 'portfolio', 'career', 'experience', 'contact'],
-			sectionsColor: ['#101820', '#6A7BA2', '#7E8F7C', '#1BBC9B', '#7E8F7C'],
+			anchors: ['hello', 'portfolio', 'language', 'career', 'awards', 'contact'],
+			sectionsColor: ['#101820', '#1BBC9B', '#6A7BA2', '#7E8F7C', '#1BBC9B', '#7E8F7C'],
 			navigation: true,
 			navigationPosition: 'right',
-			navigationTooltips: ['반갑습니다 👋', '포트폴리오 🧑‍💻', '학력 및 경력 🎓', '수상경력 🏆️', '연락처 📞']
+			navigationTooltips: ['반갑습니다 👋', '포트폴리오 🧑‍💻', '사용 언어 🌐', '학력 및 경력 🎓', '수상내역 🏆️', '연락처 📞']
 		});
+
+		window.onload = () => {
+			if(location.hash == '#language') {
+				let progresses = document.querySelectorAll("progress");
+				for(let i of progresses) {
+					i.classList.add("active");
+				}
+			}
+		}
+
+		window.onhashchange = () => {
+			let progresses = document.querySelectorAll("progress");
+			if(location.hash == '#language') {
+				for(let i of progresses) {
+					i.classList.add("active");
+				}
+			} else {
+				for(let i of progresses) {
+					i.classList.remove("active");
+				}
+			}
+		}
 	</script>
 </body>
 </html>
