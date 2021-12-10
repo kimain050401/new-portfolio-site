@@ -152,9 +152,13 @@
 <body>
 	<div id="popup" class="hide">
 		<div class="content">
-			<button onclick="closePopup()" style="cursor: pointer; text-align: right;">ⓧ</button>
-			<h2 id="popup_title"></h2>
-			<h3 id="popup_body"></h3>
+			<div style="text-align: right;">
+				<button onclick="closePopup()" style="background: none; border: none; padding: 0; cursor: pointer; outline: none;">ⓧ</button>
+			</div>
+			<div style="text-align: center;">
+				<h2 style="color: #101820;" id="popup_title"></h2>
+				<h4 style="color: #101820;" id="popup_body"></h4>
+			</div>
 		</div>
 	</div>
 	<div id="fullpage">
