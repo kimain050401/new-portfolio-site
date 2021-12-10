@@ -17,16 +17,12 @@
 			font-size: 5em;
 			color: #fff;
 		}
-		h2{
+		h2, h3{
 			font-size: 3em;
 			color: #fff;
 		}
 		#section1 h2{
 			font-size: 4em;
-			color: #fff;
-		}
-		h3{
-			font-size: 3em;
 			color: #fff;
 		}
 		h4{
@@ -245,7 +241,6 @@
 			</div>
 		</div>
 	</div>
-
 	<script type="text/javascript" src="fullpage.js"></script>
 	<script type="text/javascript" src="examples.js"></script>
 	<script type="text/javascript">
@@ -256,7 +251,6 @@
 			navigationPosition: 'right',
 			navigationTooltips: ['반갑습니다 👋', '포트폴리오 💻', '사용 언어 🌐', '학력 및 경력 🎓', '수상내역 🏆️', '연락처 📞']
 		});
-
 		window.onload = () => {
 			if(location.hash == '#language') {
 				let progresses = document.querySelectorAll("progress");
@@ -265,7 +259,6 @@
 				}
 			}
 		}
-
 		window.onhashchange = () => {
 			let progresses = document.querySelectorAll("progress");
 			if(location.hash == '#language') {
