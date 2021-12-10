@@ -38,7 +38,7 @@
 			background: gray;
 			transition: width 1.5s ease;
 		}
-		progress.active {
+		progress.active{
 			width: 90%;
 		}
         progress#swift::-moz-progress-bar{
@@ -77,10 +77,10 @@
 		.fp-controlArrow.fp-next{
 			border-width: 38.5px 50px 38.5px 34px;
 		}
-		#infoMenu li a {
+		#infoMenu li a{
 			color: #fff;
 		}
-		@keyframes shake {
+		@keyframes shake{
 			0% {
 				transform: rotate(0deg);
 			}
@@ -91,18 +91,70 @@
 				transform: rotate(0deg);
 			}
 		}
-		#hello_hand {
+		#hello_hand{
 			animation: shake 3s infinite;
+		}
+		#popup{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(0, 0, 0, .7);
+			z-index: 1;
+		}
+		#popup.hide{
+			display: none;
+		}
+		#popup.has-filter{
+			backdrop-filter: blur(4px);
+			-webkit-backdrop-filter: blur(4px);
+		}
+		#popup .content{
+			padding: 20px;
+			background: #fff;
+			border-radius: 5px;
+			box-shadow: 1px 1px 3px rgba(0, 0, 0, .3);
 		}
 	</style>
 	<script>
 		if(document.referrer.indexOf("kimain.me") == -1){
 			window.location.href = 'https://kimain.me';
 		}
+		function showPopup(hasFilter){
+			const popup = document.querySelector('#popup');
+			if(hasFilter){
+				popup.classList.add('has-filter');
+			} else{
+				popup.classList.remove('has-filter');
+			}
+			popup.classList.remove('hide');
+		}
+		function closePopup(){
+			const popup = document.querySelector('#popup');
+			popup.classList.add('hide');
+		}
 	</script>
 </head>
 <body>
 	<div id="fullpage">
+		<div id="popup" class="hide">
+			<div class="content">
+				<button onclick="closePopup()" style="cursor: pointer; text-align: right;">ⓧ</button>
+				<h2 id="popup_title"></h2>
+				<h3 id="popup_body"></h3>
+			</div>
+		</div>
+		<script>
+			function popup_dimigome(){
+				document.getElementById("popup_title").innerText = "디미고미 TMI";
+				document.getElementById("popup_body").innerText = "디미고미가 사용되기 전에 원래는 한국디지털미디어고등학교 인트라넷 서비스 중 하나인 디미고인이라는 시스템이 있었어요. 하지만 왜인지 20기 입학 때부터 사용하지 않았고, 칠판으로 적기 시작했어요. 하지만 저는 칠판에 적는 것이 불편하고 나갈 때마다 분필을 만지는 것이 싫어서 디미고인과 칠판보다 편리한 서비스를 만들고자 해서 개발하게 되었어요.";
+				showPopup(true);
+			}
+		</script>
 		<div class="section" id="section0">
 			<div class="intro" style="margin: 0px 100px 0px 100px; text-align: left;">
 				<div style="display: block; text-align: left;">
@@ -129,6 +181,8 @@
 					<br>
 					<h4 style="color: #DCE2F0;">언어 | SwiftUI, HTML, JS, Ajax, Flask</h4>
 					<h4 style="color: #DCE2F0;">개발 | 2021년 10월 21일 ~ 지속적인 개발 중</h4>
+					<br>
+					<button style="padding: 10px 20px 10px 20px; border-radius: 10px; border: solid black 5px; cursor: pointer;" onclick="popup_dimigome()">디미고미 TMI</button>
 				</div>
 			</div>
 			<div class="slide" id="slide2">
