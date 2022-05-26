@@ -1,367 +1,46 @@
 <!DOCTYPE html>
 <html lang="kr">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="format-detection" content="telephone=no">
-	<title>Swift 개발자, 김아인입니다</title>
-	<meta property="og:title" content="Swift 개발자, 김아인입니다">
-    	<meta name="description" content="반갑습니다👋 Swift 개발자, 김아인입니다">
-    	<meta property="og:description" content="반갑습니다👋 Swift 개발자, 김아인입니다">
-	<meta name="google-site-verification" content="AP1w1ljiRL4-R1QFe6_aDg97eaD6PCbX5lkpQQvSdE0" />
-	<meta name="Resource-type" content="Document" />
-	<link rel="stylesheet" type="text/css" href="fullpage.css" />
-	<link rel="stylesheet" type="text/css" href="examples.css" />
-	<style>
-		@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
-		html, body{
-			font-family: 'Do Hyeon', sans-serif;
-			word-break: keep-all;
-		}
-		h1{
-			font-size: 5em;
-			color: #fff;
-		}
-		h2, h3{
-			font-size: 3em;
-			color: #fff;
-		}
-		#section1 h2{
-			font-size: 4em;
-			color: #fff;
-		}
-		h4{
-			font-size: 2em;
-			color: #fff;
-		}
-		h5{
-			font-size: 2em;
-			color: #fff;
-		}
-		.tmis{
-			font-family: 'Do Hyeon', sans-serif;
-			font-size: 2em;
-			background: none;
-			color: #DCE2F0;
-			padding: 5px 30px 5px 30px;
-			border-radius: 20px;
-			border: solid #DCE2F0 4px;
-			cursor: pointer;
-		}
-		progress{
-			width: 0%;
-			background: gray;
-			transition: width 1.5s ease;
-		}
-		progress.active{
-			width: 90%;
-		}
-        progress#swift::-moz-progress-bar{
-            background: #f05137;
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iOS 개발자 김아인</title>
+    <style>
+        @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+        *{
+            font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif !important;
+            word-break: keep-all;
         }
-        progress#swift::-webkit-progress-value{
-            background: #f05137;
+        html, body{
+            margin: 0;
+            padding: 0;
         }
-		progress#javascript::-moz-progress-bar{
-            background: #f7df1c;
+        .box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
-        progress#javascript::-webkit-progress-value{
-            background: #f7df1c;
+        @keyframes moveBrush{
+            0%{
+                transform: translate(-80%, -50%) rotate(205deg);
+            }
+            50%{
+                transform: translate(-75%, -35%) rotate(205deg);
+            }
+            100%{
+                transform: translate(-80%, -50%) rotate(205deg);
+            }
         }
-		progress#python::-moz-progress-bar{
-            background: #40aaff;
-        }
-        progress#python::-webkit-progress-value{
-            background: #40aaff;
-        }
-		progress#html::-moz-progress-bar{
-            background: #009914;
-        }
-        progress#html::-webkit-progress-value{
-            background: #009914;
-        }
-		.intro p{
-			color: #fff;
-		}
-		.section{
-			text-align: center;
-		}
-		.fp-controlArrow.fp-prev{
-			border-width: 38.5px 34px 38.5px 50px;
-		}
-		.fp-controlArrow.fp-next{
-			border-width: 38.5px 50px 38.5px 34px;
-		}
-		#infoMenu li a{
-			color: #fff;
-		}
-		@keyframes shake{
-			0% {
-				transform: rotate(0deg);
-			}
-			50% {
-				transform: rotate(20deg);
-			}
-			100% {
-				transform: rotate(0deg);
-			}
-		}
-		#hello_hand{
-			animation: shake 3s infinite;
-		}
-		#popup{
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			position: fixed;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background: rgba(0, 0, 0, .7);
-			z-index: 1;
-		}
-		#popup.hide{
-			display: none;
-		}
-		#popup.has-filter{
-			backdrop-filter: blur(4px);
-			-webkit-backdrop-filter: blur(4px);
-		}
-		#popup .content{
-			padding: 20px;
-			background: #fff;
-			border-radius: 5px;
-			box-shadow: 1px 1px 3px rgba(0, 0, 0, .3);
-		}
-	</style>
-	<script>
-		if(document.referrer.indexOf("kimain.me") == -1){
-			window.location.href = 'https://kimain.me';
-		}
-		function showPopup(hasFilter){
-			const popup = document.querySelector('#popup');
-			if(hasFilter){
-				popup.classList.add('has-filter');
-			} else{
-				popup.classList.remove('has-filter');
-			}
-			popup.classList.remove('hide');
-		}
-		function closePopup(){
-			const popup = document.querySelector('#popup');
-			popup.classList.add('hide');
-		}
-	</script>
+    </style>
 </head>
 <body>
-	<div id="popup" class="hide">
-		<div class="content">
-			<div style="text-align: right;">
-				<button onclick="closePopup()" style="background: none; border: none; padding: 0; cursor: pointer; outline: none; font-size: 2em;">ⓧ</button>
-			</div>
-			<div style="text-align: center;">
-				<h2 style="color: #101820;" id="popup_title"></h2>
-				<h4 style="color: #101820;" id="popup_body"></h4>
-			</div>
-			<br>
-		</div>
-	</div>
-	<div id="fullpage">
-		<script>
-			function popup_dimigome(){
-				document.getElementById("popup_title").innerText = "디미고미 TMI";
-				document.getElementById("popup_body").innerText = "디미고미가 사용되기 전에 원래는 한국디지털미디어고등학교 인트라넷 서비스 중 하나인 디미고인이라는 시스템이 있었어요. 하지만 왜인지 20기 입학 때부터 사용하지 않았고, 칠판으로 적기 시작했어요. 하지만 저는 칠판에 적는 것이 불편하고 나갈 때마다 분필을 만지는 것이 싫어서 디미고인과 칠판보다 편리한 서비스를 만들고자 해서 개발하게 되었어요.";
-				showPopup(true);
-			}
-		</script>
-		<div class="section" id="section0">
-			<div class="intro" style="margin: 0px 100px 0px 100px; text-align: left;">
-				<div style="display: block; text-align: left;">
-					<h1 style="display: inline-block; color: #DCE2F0; text-align: left; margin: 0px 20px 0px 0px;">반갑습니다</h1>
-					<h1 id="hello_hand" style="display: inline-block; color: #DCE2F0; text-align: left; margin: 0px 20px 0px 0px;">👋</h1>
-				</div>
-				<div style="display: block; text-align: left;">
-					<h1 style="display: inline-block; text-align: left; margin: 0px 20px 0px 0px; background: linear-gradient(#fdae3f, #ff3727); color: transparent; -webkit-background-clip: text;">Swift</h1>
-					<h1 style="display: inline-block; color: #DCE2F0; text-align: left; margin: 0px 20px 0px 0px;">개발자, </h1>
-					<h1 style="display: inline-block; text-align: left; margin: 0; background: linear-gradient(#67e0da, #13c43f); color: transparent; -webkit-background-clip: text;">김아인</h1>
-					<h1 style="display: inline-block; color: #DCE2F0; text-align: left; margin: 0px 20px 0px 0px;">입니다.</h1>
-				</div>
-				<h4 style="display: inline-block; color: #DCE2F0; text-align: left; cursor: pointer;" onclick="window.open('https://blog.kimain.me')">KimAin's Blog GO ></h4><br>
-				<h4 style="display: inline-block; color: #DCE2F0; text-align: left; cursor: pointer;" onclick="window.open('https://github.com/kimain050401')">GitHub @kimain050401 GO ></h4>
-			</div>
-		</div>
-		<div class="section" id="section1">
-			<div class="slide" id="slide1">
-				<div class="intro" style="padding: 120px;">
-					<img src="green-grass.png" width="100px" style="border-radius: 20px;">
-					<br>
-					<h2 style="color: #DCE2F0;">초록잔디 (iOS)</h2>
-					<br>
-					<h3 style="color: #DCE2F0;">깃허브 커밋(잔디심기)을 지속적으로 할 수 있도록 도와주는 앱</h3>
-					<br>
-					<h4 style="color: #DCE2F0;">언어 | SwiftUI</h4>
-					<h4 style="color: #DCE2F0;">개발 | 2021년 1월 1일 ~ 지속적인 개발 중</h4>
-				</div>
-			</div>
-			<div class="slide" id="slide2">
-				<div class="intro" style="padding: 120px;">
-					<img src="dimigome.png" width="100px" style="border-radius: 20px;">
-					<br>
-					<h2 style="color: #DCE2F0;">디미고미 (iOS & Web)</h2>
-					<br>
-					<h3 style="color: #DCE2F0;">한국디지털미디어고등학교 학생들의 방과후 및 야간 자율학습 시간의 자습 위치 등록 서비스</h3>
-					<br>
-					<h4 style="color: #DCE2F0;">언어 | SwiftUI, HTML, JS, Ajax, Flask</h4>
-					<h4 style="color: #DCE2F0;">개발 | 2021년 10월 21일 ~ 지속적인 개발 중</h4>
-				</div>
-			</div>
-			<div class="slide" id="slide3">
-				<div class="intro" style="padding: 120px;">
-					<img src="corons_app.png" width="100px" style="border-radius: 20px;">
-					<br>
-					<h2 style="color: #DCE2F0;">Coron's APP (iOS)</h2>
-					<br>
-					<h3 style="color: #DCE2F0;">처음 개발해본 iOS APP, 강력한 보안을 가진 메모 앱</h3>
-					<br>
-					<h4 style="color: #DCE2F0;">언어 | Swift, Storyboard</h4>
-					<h4 style="color: #DCE2F0;">개발 | 2021년 1월 30일 ~ 2021년 3월 1일</h4>
-				</div>
-			</div>
-			<div class="slide" id="slide4">
-				<div class="intro" style="padding: 120px;">
-					<img src="diet.png" width="100px" style="border-radius: 20px;">
-					<br>
-					<h2 style="color: #DCE2F0;">[서비스 종료] 살빼 (iOS)</h2>
-					<br>
-					<h3 style="color: #DCE2F0;">다이어트하는 사람들을 위한 친구 간 몸무게 공유 서비스</h3>
-					<br>
-					<h4 style="color: #DCE2F0;">언어 | SwiftUI, Flask</h4>
-					<h4 style="color: #DCE2F0;">개발 | 2021년 7월 1일 ~ 2021년 9월 11일</h4>
-				</div>
-			</div>
-			<div class="slide" id="slide5">
-				<div class="intro" style="padding: 120px;">
-					<img src="dimitimes.png" width="100px" style="border-radius: 20px;">
-					<br>
-					<h2 style="color: #DCE2F0;">디미타임즈 (Web)</h2>
-					<br>
-					<h3 style="color: #DCE2F0;">한국디지털미디어고등학교 학생들의 온라인 수업 접속 편의를 위한 서비스</h3>
-					<br>
-					<h4 style="color: #DCE2F0;">언어 | HTML, JS, Flask</h4>
-					<h4 style="color: #DCE2F0;">개발 | 2021년 3월 4일 ~ 2021년 11월 20일</h4>
-				</div>
-			</div>
-			<div class="slide" id="slide6">
-				<div class="intro" style="padding: 120px;">
-					<img src="findflag.png" width="100px" style="border-radius: 20px;">
-					<br>
-					<h2 style="color: #DCE2F0;">Find Flag()! (Web)</h2>
-					<br>
-					<h3 style="color: #DCE2F0;">개발자를 위한 간단하고 쉬운 모의 CTF 서비스</h3>
-					<br>
-					<h4 style="color: #DCE2F0;">언어 | HTML, JS, Ajax, Flask</h4>
-					<h4 style="color: #DCE2F0;">개발 | 2020년 7월 5일 ~ 2021년 11월 22일</h4>
-				</div>
-			</div>
-			<div class="slide" id="slide7">
-				<div class="intro" style="padding: 120px;">
-					<img src="lock.png" width="100px" style="border-radius: 20px;">
-					<br>
-					<h2 style="color: #DCE2F0;">이것들 외에도</h2>
-					<br>
-					<h3 style="color: #DCE2F0;">이것들 외에도 진행했던 프로젝트들도 있지만, 아직은 공개하기 부끄러워요.</h3>
-					<h3 style="color: #DCE2F0;">그리고 지금 진행 중인 프로젝트 중 어떤 것들은 아직까지 비공개인 서비스에요.</h3>
-					<h3 style="color: #DCE2F0;">제가 더 성장해서 더 많은 프로젝트들을 진행하게 되면 빠르게 공개하도록 할게요!</h3>
-				</div>
-			</div>
-		</div>
-		<div class="section" id="section2">
-			<div class="intro" style="margin: 0px 100px 0px 100px;">
-				<h1 style="color: #DCE2F0; text-align: left;">사용 가능한 언어 🌐</h1>
-				<br>
-				<div style="text-align: left;">
-					<h2 style="color: #DCE2F0; text-align: left;">Swift</h2>
-					<progress id="swift" max="100" value="80"></progress>
-				</div>
-				<br>
-				<div style="text-align: left;">
-					<h2 style="color: #DCE2F0; text-align: left;">Python</h2>
-					<progress id="python" max="100" value="60"></progress>
-				</div>
-				<br>
-				<div style="text-align: left;">
-					<h2 style="color: #DCE2F0; text-align: left;">HTML</h2>
-					<progress id="html" max="100" value="70"></progress>
-				</div>
-				<br>
-				<div style="text-align: left;">
-					<h2 style="color: #DCE2F0; text-align: left;">Java Script</h2>
-					<progress id="javascript" max="100" value="40"></progress>
-				</div>
-			</div>
-		</div>
-		<div class="section" id="section2">
-			<div class="intro" style="margin: 0px 100px 0px 100px;">
-				<h1 style="color: #DCE2F0; text-align: left;">학력 및 경력 🎓</h1>
-				<br>
-				<h2 style="color: #DCE2F0; text-align: left;">- Dropper Lab : Sec 팀 소속 (2020.10.13~2021.04.02)</h2>
-				<h2 style="color: #DCE2F0; text-align: left;">- 한국디지털미디어고등학교 20기 해킹방어과 재학 (2021.03.02~)</h2>
-				<h2 style="color: #DCE2F0; text-align: left;">- 한국디지털미디어고등학교 인트라넷 개발팀 DIN 소속 (2021.04.16~)</h2>
-				<h2 style="color: #DCE2F0; text-align: left;">- Hyphen 팀 대표 (2021.05.14~)</h2>
-			</div>
-		</div>
-		<div class="section" id="section3">
-			<div class="intro" style="margin: 0px 100px 0px 100px;">
-				<h1 style="color: #DCE2F0; text-align: left;">수상내역 🏆️</h1>
-				<br>
-				<h2 style="color: #DCE2F0; text-align: left;">- 2020 공주대학교 정보보호영재교육원 CTF 개인예선전 7위</h2>
-				<h2 style="color: #DCE2F0; text-align: left;">- 2021 신세계 I&C Hello New( ) World 해커톤 최우수상 (디미타임즈 팀)</h2>
-				<h2 style="color: #DCE2F0; text-align: left;">- JA Korea-삼성 창업놀이터 2021 우수상 (디미바이 팀)</h2>
-			</div>
-		</div>
-		<div class="section" id="section4">
-			<div class="intro" style="margin: 0px 100px 0px 100px;">
-				<h1 style="color: #DCE2F0; text-align: left;">연락처 📞</h1>
-				<br>
-				<h2 style="color: #DCE2F0; text-align: left; cursor: pointer; width: fit-content;" onclick="location.href='tel:01095394321'">Mobile | 010-9539-4321</h2>
-				<h2 style="color: #DCE2F0; text-align: left; cursor: pointer; width: fit-content;" onclick="location.href='mailto:kimain0401@kimain.me'">Email | kimain0401@kimain.me</h2>
-				<h2 style="color: #DCE2F0; text-align: left;">Discord | corondev_kimain #0722</h2>
-				<h2 style="color: #DCE2F0; text-align: left; cursor: pointer; width: fit-content;" onclick="window.open('https://github.com/kimain050401')">GitHub | github.com/kimain050401</h2>
-				<br>
-				<h5 style="color: #DCE2F0; text-align: left; margin: 0px 0px 0px 0px;">Copyright © 2021-2022 KimAin. 모든 권리 보유.</h5>
-			</div>
-		</div>
-	</div>
-	<script type="text/javascript" src="fullpage.js"></script>
-	<script type="text/javascript" src="examples.js"></script>
-	<script type="text/javascript">
-		var myFullpage = new fullpage('#fullpage', {
-			anchors: ['hello', 'portfolio', 'language', 'career', 'awards', 'contact'],
-			sectionsColor: ['#101820', '#1BBC9B', '#7E8F7C', '#6A7BA2', '#1BBC9B', '#7E8F7C'],
-			navigation: true,
-			navigationPosition: 'right',
-			navigationTooltips: ['반갑습니다 👋', '포트폴리오 💻', '사용 가능한 언어 🌐', '학력 및 경력 🎓', '수상내역 🏆️', '연락처 📞']
-		});
-		window.onload = () => {
-			if(location.hash == '#language') {
-				let progresses = document.querySelectorAll("progress");
-				for(let i of progresses) {
-					i.classList.add("active");
-				}
-			}
-		}
-		window.onhashchange = () => {
-			let progresses = document.querySelectorAll("progress");
-			if(location.hash == '#language') {
-				for(let i of progresses) {
-					i.classList.add("active");
-				}
-			} else {
-				for(let i of progresses) {
-					i.classList.remove("active");
-				}
-			}
-		}
-	</script>
+    <div class="box">
+        <div style="text-align: center;">
+            <img src="bird.png" style="width: 180px; transform: translate(20%);">
+            <img src="brush.png" style="width: 100px; transform: translate(-80%, -50%) rotate(205deg); animation: moveBrush 1s ease infinite;">
+            <h1 style="display: block; font-size: 40px; line-height: 10px;">새단장 중!</h1>
+        </div>
+    </div>
 </body>
 </html>
